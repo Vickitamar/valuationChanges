@@ -2,7 +2,6 @@ import React, { useEffect } from "react";
 import styled from "styled-components";
 import Detail from "../components/detail";
 import { Banner } from "../components/banner";
-import Property from "../components/property";
 
 const Main = styled.main`
   max-width: 960px;

@@ -19,6 +19,13 @@ export const AccountHeadline = styled.h2`
   margin-bottom: ${(props) => props.theme.space.s};
 `;
 
+export const StyledInfoWrapper = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+`;
+
 export const InfoText = styled.div`
   line-height: 1.6;
   font-size: ${(props) => props.theme.typography.l.fontSize};
@@ -29,6 +36,22 @@ export const InfoText = styled.div`
   p {
     margin-bottom: ${(props) => props.theme.space.s};
   }
+`;
+
+export const InfoFigure = styled.div`
+line-height: 1.6;
+font-size: ${(props) => props.theme.typography.l.fontSize};
+color: green;
+background-color: lightGreen;
+border-radius: ${(props) => props.theme.space.m};
+display: flex;
+margin-bottom: ${(props) => props.theme.space.s};
+justify-content: center;
+width: 50%;
+
+p {
+  margin-bottom: ${(props) => props.theme.space.s};
+}
 `;
 
 export const Inset = styled.div`

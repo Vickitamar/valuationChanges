@@ -5,6 +5,7 @@ import { Button } from "./button";
 import Value from "./value";
 import Property from "./property";
 import Mortgage from "./mortgage";
+import ValuationChanges from "./valuationChanges";
 import { AccountSection, Inset } from "./style";
 
 const Detail = ({ account }) => {
@@ -23,6 +24,9 @@ const Detail = ({ account }) => {
 
   return (
     <Inset>
+      <AccountSection>
+        <ValuationChanges account={account} />
+      </AccountSection>
       <AccountSection>
         <Value account={account} />
       </AccountSection>
