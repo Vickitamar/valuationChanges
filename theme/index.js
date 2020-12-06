@@ -29,6 +29,10 @@ export const theme = {
     white: {
       default: "#fff",
     },
+    green: {
+      default: "#cbffed",
+      darker: "#068481",
+    }
   },
   typography: {
     xs: {

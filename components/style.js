@@ -41,8 +41,9 @@ export const InfoText = styled.div`
 export const InfoFigure = styled.div`
 line-height: 1.6;
 font-size: ${(props) => props.theme.typography.l.fontSize};
-color: green;
-background-color: lightGreen;
+font-weight: 500;
+color: ${(props) => props.theme.colors.green.darker};
+background-color: ${(props) => props.theme.colors.green.default};
 border-radius: ${(props) => props.theme.space.m};
 display: flex;
 margin-bottom: ${(props) => props.theme.space.s};
