@@ -18,8 +18,12 @@ const PropertyDetails = ({ account }) => {
 }
 
 export async function getServerSideProps(context) {
-  //  const res = await fetch(`"/api/account"`)
-  //  const data = await res.json()
+  // what I wanted to do- but couldnt get the endpoint to work,
+  // I used a placeholder api endpoint and that worked, just not this one,
+  // so am using mock data instead
+
+  //  const res = await fetch(`"http://localhost:3333/api/account"`)
+  //  const account = await res.json()
   const account = {
     uid: "65156cdc-5cfd-4b34-b626-49c83569f35e",
     deleted: false,
