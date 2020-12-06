@@ -1,18 +1,11 @@
 /* eslint-disable max-statements */
 import PropTypes from "prop-types";
 import React, { useEffect } from "react";
-import { add, format } from "date-fns";
 import { Button } from "./button";
-
-import {
-  AccountHeadline,
-  AccountLabel,
-  AccountSection,
-  AccountList,
-  InfoText,
-  Inset,
-  RowContainer,
-} from "./style";
+import Value from "./value";
+import Property from "./property";
+import Mortgage from "./mortgage";
+import { AccountSection, Inset } from "./style";
 
 const account = {
   uid: "65156cdc-5cfd-4b34-b626-49c83569f35e",
@@ -56,54 +49,14 @@ const Detail = ({}) => {
   return (
     <Inset>
       <AccountSection>
-        <AccountLabel>Estimated Value</AccountLabel>
-        <AccountHeadline>
-          {new Intl.NumberFormat("en-GB", {
-            style: "currency",
-            currency: "GBP",
-          }).format(account.recentValuation.amount)}
-        </AccountHeadline>
-        <AccountList>
-          <InfoText>
-            {`Last updated ${format(lastUpdate, "do MMM yyyy")}`}
-          </InfoText>
-          <InfoText>
-            {`Next update ${format(
-              add(lastUpdate, { days: account.updateAfterDays }),
-              "do MMM yyyy"
-            )}`}
-          </InfoText>
-        </AccountList>
+        <Value account={account} />
       </AccountSection>
       <AccountSection>
-        <AccountLabel>Property details</AccountLabel>
-        <RowContainer>
-          <AccountList>
-            <InfoText>{account.name}</InfoText>
-            <InfoText>{account.bankName}</InfoText>
-            <InfoText>{account.postcode}</InfoText>
-          </AccountList>
-        </RowContainer>
+        <Property account={account} />
       </AccountSection>
       {mortgage && (
         <AccountSection>
-          <AccountLabel>Mortgage</AccountLabel>
-          <RowContainer
-            // This is a dummy action
-            onClick={() => alert("You have navigated to the mortgage page")}
-          >
-            <AccountList>
-              <InfoText>
-                {new Intl.NumberFormat("en-GB", {
-                  style: "currency",
-                  currency: "GBP",
-                }).format(
-                  Math.abs(account.associatedMortgages[0].currentBalance)
-                )}
-              </InfoText>
-              <InfoText>{account.associatedMortgages[0].name}</InfoText>
-            </AccountList>
-          </RowContainer>
+          <Mortgage account={account} />
         </AccountSection>
       )}
       <Button
