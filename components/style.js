@@ -89,3 +89,7 @@ export const RowContainer = styled.div`
     margin-bottom: ${(props) => props.theme.space.m};
   }
 `;
+
+export const StyledSpan = styled.span`
+  font-weight: 600;
+`;

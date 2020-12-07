@@ -1,5 +1,4 @@
 import React from "react";
-import styled, { css } from "styled-components";
 import { lightFormat } from "date-fns";
 import accountType from "../types";
 import {
@@ -9,13 +8,9 @@ import {
     RowContainer,
     InfoFigure,
     StyledInfoWrapper,
+    StyledSpan,
   } from "./style";
 
-
-const StyledSpan = styled.span`
-  font-weight: 600;
-
-`;
 const ValuationChanges = ({account}) => {
     
     const sincePurchase = account.recentValuation.amount - account.originalPurchasePrice
