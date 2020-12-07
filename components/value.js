@@ -1,5 +1,6 @@
 import React from "react";
 import { add, format } from "date-fns";
+import accountType from "../types";
 import {
     AccountHeadline,
     AccountLabel,
@@ -36,7 +37,10 @@ const Value = ({account}) => {
           </AccountList>
         </>
     )
-
 }
+
+Value.propTypes = {
+  account: accountType
+};
 
 export default Value;

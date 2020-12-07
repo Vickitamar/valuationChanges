@@ -1,6 +1,7 @@
 import React from "react";
 import styled, { css } from "styled-components";
 import { lightFormat } from "date-fns";
+import accountType from "../types";
 import {
     AccountLabel,
     AccountList,
@@ -45,6 +46,10 @@ const ValuationChanges = ({account}) => {
           </RowContainer>
         </>
     )
+};
+
+ValuationChanges.propTypes = {
+  account: accountType
 };
 
 export default ValuationChanges;

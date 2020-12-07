@@ -1,4 +1,5 @@
 import React from "react";
+import accountType from "../types";
 import {
     AccountLabel,
     AccountList,
@@ -28,6 +29,10 @@ const Mortgage = ({account}) => {
           </RowContainer>
         </>
     )
+};
+
+Mortgage.propTypes = {
+  account: accountType
 };
 
 export default Mortgage;

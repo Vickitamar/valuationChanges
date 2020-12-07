@@ -1,5 +1,4 @@
 /* eslint-disable max-statements */
-import PropTypes from "prop-types";
 import React from "react";
 import { Button } from "./button";
 import Value from "./value";
@@ -7,6 +6,7 @@ import Property from "./property";
 import Mortgage from "./mortgage";
 import ValuationChanges from "./valuationChanges";
 import { AccountSection, Inset } from "./style";
+import accountType from "../types";
 
 const Detail = ({ account }) => {
   // how I would have done it in React
@@ -59,6 +59,10 @@ const Detail = ({ account }) => {
       </Button>
     </Inset>
   );
+};
+
+Detail.propTypes = {
+  account: accountType
 };
 
 export default Detail;

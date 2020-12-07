@@ -1,4 +1,5 @@
 import React from "react";
+import accountType from "../types";
 import {
     AccountLabel,
     AccountList,
@@ -19,6 +20,10 @@ const Property = ({account}) => {
           </RowContainer>
         </>
     )
+};
+
+Property.propTypes = {
+  account: accountType
 };
 
 export default Property;
